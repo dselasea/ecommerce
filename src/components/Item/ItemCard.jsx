@@ -3,52 +3,10 @@ import styles from "./itemcart.module.css";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 
-const ItemCard = ({ products }) => {
-  const [quantity, setQuantity] = useState(products);
-
-  // function handleItemDecrease() {
-  //   if (itemQuantity < 1 || quantity < 1) {
-  //     return;
-  //   } else {
-  //     setItemQuantity((prevItemQuantity) => prevItemQuantity - 1);
-  //     setQuantity((prevQuantity) => prevQuantity - 1);
-  //     setPrice((prevPrice) => prevPrice - item.price);
-  //   }
-  // }
-
-  // function handleItemIncrease() {
-  //   setItemQuantity((prevItemQuantity) => prevItemQuantity + 1);
-  //   setQuantity((prevQuantity) => prevQuantity + 1);
-  //   setPrice((prevPrice) => prevPrice + item.price);
-  // }
-
-  function handleItemIncrease(productId) {
-    setQuantity(
-      quantity.map((product) => {
-        if (product.id === productId) {
-          return { ...product, quantity: product.quantity + 1 };
-        } else {
-          return product;
-        }
-      })
-    );
-  }
-
-  function handleItemDecrease(productId) {
-    setQuantity(
-      quantity.map((product) => {
-        if (product.id === productId) {
-          return { ...product, quantity: product.quantity - 1 };
-        } else {
-          return product;
-        }
-      })
-    );
-  }
-
+const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
   return (
     <>
-      {quantity.map((product) => {
+      {products.map((product) => {
         const priceStyle = product.price < 100 ? styles.priceGreen : "";
         return (
           <div className={styles.card} key={product.id}>

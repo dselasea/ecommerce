@@ -2,20 +2,15 @@ import React from "react";
 import styles from "./content.module.css";
 import ItemCard from "../Item/ItemCard";
 
-const Content = ({ products, setItemQuantity, itemQuantity, setPrice }) => {
+const Content = ({ products, handleItemIncrease, handleItemDecrease }) => {
   return (
     <main className={styles.container}>
       <div className={styles.content}>
-        {/* {products.map((item) => (
-          <ItemCard
-            key={item.id}
-            item={item}
-            setItemQuantity={setItemQuantity}
-            itemQuantity={itemQuantity}
-            setPrice={setPrice}
-          />
-        ))} */}
-        <ItemCard products={products} />
+        <ItemCard
+          products={products}
+          handleItemIncrease={handleItemIncrease}
+          handleItemDecrease={handleItemDecrease}
+        />
       </div>
     </main>
   );
