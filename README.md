@@ -2,7 +2,7 @@
 
 <div align="center">
   <!-- You are encouraged to replace this logo with your own! Otherwise you can also remove it. -->
-  <img src="murple_logo.png" alt="logo" width="140"  height="auto" />
+  <!-- <img src="murple_logo.png" alt="logo" width="140"  height="auto" /> -->
   <br/>
 
   <h3><b>React Ecommerce Project</b></h3>
@@ -35,9 +35,9 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 Mallmart <a name="about-project"></a>
 
-**React Ecommerce Project** is an ecommerce web application using React while learning from the official documentation. This project aims to provide users with an intuitive interface to browse and purchase products online. By leveraging React's component-based architecture and efficient rendering system, I'm creating modular and responsive features such as product listings and a shopping cart. The React documentation serves as my essential resource, guiding me through core concepts like component lifecycle and state management. With each step, I'm gaining the skills and knowledge needed to develop a robust and user-friendly ecommerce platform.
+**MallMart** is a React ecommerce web application using React while learning from the official documentation. This project aims to provide users with an intuitive interface to browse and purchase products online. By leveraging React's component-based architecture and efficient rendering system, I'm creating modular and responsive features such as product listings and a shopping cart. The React documentation serves as my essential resource, guiding me through core concepts like component lifecycle and state management. With each step, I'm gaining the skills and knowledge needed to develop a robust and user-friendly ecommerce platform.
 
 ## 🛠 Built With <a name="built-with"></a>
 
