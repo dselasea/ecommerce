@@ -4,7 +4,8 @@ import styles from "./itemcart.module.css";
 // import { FaMinus } from "react-icons/fa";
 import Button from "../Button/Button";
 
-const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
+const ItemCard = ({ products, handleIncreaseItem, handleDecreaseItem }) => {
+  console.log(products);
   return (
     <>
       {products.map((product) => {
@@ -16,15 +17,15 @@ const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
               <button
                 className={styles.btn}
                 onClick={() => {
-                  handleItemIncrease(product.id);
+                  handleIncreaseItem(product.id);
                 }}
               >
                 Add
               </button>
             ) : (
               <Button
-                handleItemDecrease={handleItemDecrease}
-                handleItemIncrease={handleItemIncrease}
+                handleDecreaseItem={handleDecreaseItem}
+                handleIncreaseItem={handleIncreaseItem}
                 product={product}
               />
             )}

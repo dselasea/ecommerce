@@ -2,14 +2,18 @@ import React from "react";
 import { FaPlus } from "react-icons/fa";
 import { FaMinus } from "react-icons/fa";
 import styles from "./button.module.css";
-const Button = ({ handleItemIncrease, handleItemDecrease, product }) => {
+const Button = ({ handleIncreaseItem, handleDecreaseItem, product }) => {
   return (
     <button className={styles.btn}>
-      <FaMinus onClick={() => handleItemDecrease(product.id)} />
+      <FaMinus
+        onClick={() => {
+          handleDecreaseItem(product.id);
+        }}
+      />
       <h4 style={{ margin: "0 1rem" }}>{product.quantity}</h4>
       <FaPlus
         onClick={() => {
-          handleItemIncrease(product.id);
+          handleIncreaseItem(product.id);
         }}
       />
     </button>

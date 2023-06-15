@@ -5,8 +5,8 @@ import { AiOutlineClose } from "react-icons/ai";
 
 const CartItems = ({
   products,
-  handleItemDecrease,
-  handleItemIncrease,
+  handleDecreaseItem,
+  handleIncreaseItem,
   handleToggle,
   price,
 }) => {
@@ -38,8 +38,8 @@ const CartItems = ({
                     <p>{product.name}</p>
 
                     <Button
-                      handleItemDecrease={handleItemDecrease}
-                      handleItemIncrease={handleItemIncrease}
+                      handleDecreaseItem={handleDecreaseItem}
+                      handleIncreaseItem={handleIncreaseItem}
                       product={product}
                     />
                   </div>
