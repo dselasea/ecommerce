@@ -6,7 +6,6 @@ import { products } from "./data";
 import CartItems from "./components/CartItems/CartItems";
 
 function App() {
-  // const [storeItems, setStoreItems] = useState(products);
   const [price, setPrice] = useState(0);
   const [itemQuantity, setItemQuantity] = useState(1);
   const [toggle, setToggle] = useState(false);

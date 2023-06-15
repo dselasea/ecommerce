@@ -5,7 +5,6 @@ import styles from "./itemcart.module.css";
 import Button from "../Button/Button";
 
 const ItemCard = ({ products, handleIncreaseItem, handleDecreaseItem }) => {
-  console.log(products);
   return (
     <>
       {products.map((product) => {
