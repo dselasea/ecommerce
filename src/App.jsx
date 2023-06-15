@@ -3,11 +3,13 @@ import "./App.css";
 import Content from "./components/Content/Content";
 import Header from "./components/Header/Header";
 import { products } from "./data";
+import CartItems from "./components/CartItems/CartItems";
 
 function App() {
   const [storeItems, setStoreItems] = useState(products);
   const [price, setPrice] = useState(0);
-  const [itemQuantity, setItemQuantity] = useState(0);
+  const [itemQuantity, setItemQuantity] = useState(1);
+  const [toggle, setToggle] = useState(false);
 
   useEffect(() => {
     const productQuantity = storeItems.map((product) => {
@@ -32,7 +34,7 @@ function App() {
 
     storeItems.map((product) => {
       if (product.id === productId) {
-        return setPrice((prevPrice) => prevPrice + product.price);
+        setPrice((prevPrice) => prevPrice + product.price);
       }
     });
     setStoreItems(quantity);
@@ -49,21 +51,39 @@ function App() {
 
     storeItems.map((product) => {
       if (product.id === productId) {
-        return setPrice((prevPrice) => prevPrice - product.price);
+        setPrice((prevPrice) => prevPrice - product.price);
       }
     });
     setStoreItems(quantity);
   }
 
+  function handleToggle() {
+    setToggle(!toggle);
+  }
+
   return (
-    <div>
-      <Header price={price} itemQuantity={itemQuantity} />
+    <main>
+      <Header
+        price={price}
+        itemQuantity={itemQuantity}
+        handleToggle={handleToggle}
+      />
       <Content
         products={storeItems}
         handleItemDecrease={handleItemDecrease}
         handleItemIncrease={handleItemIncrease}
       />
-    </div>
+      {toggle && (
+        <CartItems
+          products={storeItems}
+          handleItemDecrease={handleItemDecrease}
+          handleItemIncrease={handleItemIncrease}
+          product={storeItems}
+          handleToggle={handleToggle}
+          price={price}
+        />
+      )}
+    </main>
   );
 }
 

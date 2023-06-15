@@ -27,4 +27,32 @@ export const products = [
     price: 1099.99,
     quantity: 0,
   },
+  {
+    id: 5,
+    img: "https://i5.walmartimages.com/asr/6457ff19-5848-4ab0-b694-5ff35b67f431.23fda608375a28f2fb52da30c23d27ca.jpeg",
+    name: "HP EliteDesk 8200 Desktop Computer PC, Intel Quad-Core i7, 4TB HDD, 16GB DDR3 RAM, Windows 10 Home, DVD, WIFI, 22in Monitor, RGB Keyboard and Mouse (Used - Like New)",
+    price: 259.32,
+    quantity: 0,
+  },
+  {
+    id: 6,
+    img: "https://i5.walmartimages.com/asr/3b288511-d6ed-4bec-92e9-f212f428a249.f9a9483cbf848f3cb6039f2848e52e2f.png",
+    name: "BUYPOWER Gaming PC- TraceMR258i, Ryzen 7 5700, RTX 3060 12GB, 16GB, 1TB SSD, RGB, Windows 11 Home",
+    price: 1099.99,
+    quantity: 0,
+  },
+  {
+    id: 7,
+    img: "https://i5.walmartimages.com/asr/e7901ef3-2d58-4558-a98f-3d23a7a86162_1.d5792936edc2bdcb5aa9d96d1b88a74e.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+    name: 'Dell Optiplex Windows 10 Professional Desktop Computer Bundle Intel Core i3 Processor 4GB RAM 500GB Hard Drive DVD-RW with 19" LCD Wifi Keyboard and Mouse - Refurbished',
+    price: 84.42,
+    quantity: 0,
+  },
+  {
+    id: 8,
+    img: "https://i5.walmartimages.com/asr/bfff54af-1b09-463d-a2c8-690345671ee1.28e42ceff363bafe35ac252cc5c44b12.jpeg?odnHeight=612&odnWidth=612&odnBg=FFFFFF",
+    name: "Restored Dell Gaming Computer Desktop Tower PC Intel Core i5 Processor 16GB Ram 256GB SSD, 2TB Hard Drive NVIDIA GeForce GT 1030 DDR5 Bto Wifi Bluetooth Adapter Windows 10 (Refurbished)",
+    price: 211.59,
+    quantity: 0,
+  },
 ];

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import styles from "./itemcart.module.css";
-import { FaPlus } from "react-icons/fa";
-import { FaMinus } from "react-icons/fa";
+// import { FaPlus } from "react-icons/fa";
+// import { FaMinus } from "react-icons/fa";
+import Button from "../Button/Button";
 
 const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
   return (
@@ -11,7 +12,7 @@ const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
         return (
           <div className={styles.card} key={product.id}>
             <img className={styles.img} src={product.img} alt={product.name} />
-            {product.quantity < 1 ? (
+            {product.quantity === 0 ? (
               <button
                 className={styles.btn}
                 onClick={() => {
@@ -21,15 +22,11 @@ const ItemCard = ({ products, handleItemIncrease, handleItemDecrease }) => {
                 Add
               </button>
             ) : (
-              <button className={styles.btn}>
-                <FaMinus onClick={() => handleItemDecrease(product.id)} />
-                <h4 style={{ margin: "0 1rem" }}>{product.quantity}</h4>
-                <FaPlus
-                  onClick={() => {
-                    handleItemIncrease(product.id);
-                  }}
-                />
-              </button>
+              <Button
+                handleItemDecrease={handleItemDecrease}
+                handleItemIncrease={handleItemIncrease}
+                product={product}
+              />
             )}
 
             <h4 className={`${styles.price} ${priceStyle}`}>

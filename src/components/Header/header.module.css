@@ -10,10 +10,13 @@
   background: #0071DC;
   color: white;
   padding: 1rem;
+  position: fixed;
+  width: 100%;
 }
 
 .cart {
   position: relative;
+  cursor: pointer;
 }
 
 .items {
@@ -30,4 +33,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.itemsPrice {
+  position: absolute;
+  left: 0;
+  bottom: -10px;
 }
